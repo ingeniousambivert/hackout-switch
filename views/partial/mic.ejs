@@ -1,0 +1,52 @@
+<%- include('../partial/head'); -%>
+
+<button class="btn btn-sm" style="border-radius:20px; background:#E96283;
+    border-color:#E96283;color: white;
+   position: fixed; z-index:999; right:10px; bottom:10px " id="mic">
+<i class="fas fa-microphone-alt"></i>
+</button>
+<script>
+ 
+ document.querySelector("#mic").addEventListener("click",function(){
+//         const output = document.getElementById('output');
+// const startButton = document.getElementById('startButton');
+const speechRecognition = new window.webkitSpeechRecognition();
+const url="http://localhost:3000";
+
+function speak(text) {
+  const utterance = new SpeechSynthesisUtterance();
+  utterance.text = text;
+  speechSynthesis.speak(utterance);
+}
+
+
+function open(rou){
+    window.open(`${url}${rou}`, '_self');
+}
+
+function handleResult({ results }) {
+  const capturedText = results[0][0].transcript;
+  var data = capturedText;
+    
+  console.log(data.match(/login/));
+  if(data.match(/login/) ){
+   speak("Opening login")
+    open("/consumerLogin")
+  }
+  else if(data.match(/support/)){
+      console.log("try")
+    speak("opening support form");
+    open("/partnerRegisteration");  
+}
+else if(data.match(/home/)){
+      console.log("try")
+    speak("going to home page");
+    open("/");  
+}
+}
+
+speechRecognition.start();
+speechRecognition.onresult = handleResult;
+
+});
+</script>

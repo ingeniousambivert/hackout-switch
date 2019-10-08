@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partial/head'); -%>
+  <%- include('../partial/mic'); -%>
+</head>
+<body>
+<!--Main Navigation-->
+<header>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top white animated fadeInDownBig ">
+
+    <div class="container">
+
+      <!-- Navbar brand -->
+      <a class="navbar-brand" id="logo" href="/">SAKSHAM</a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-bar"
+        aria-controls="navigation-bar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+
+      <div class="collapse navbar-collapse " id="navigation-bar">
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto smooth-scroll">
+        
+          <li class="nav-item"> <a href="/consumerRegisteration"> <button
+            class="btn btn-sm round deep-purple btn-md my-2 my-sm-0 ml-3 white-text">Signup</button></a>
+            </li>
+              <li class="nav-item"> <a href="/consumerLogin"> <button
+            class="btn btn-link btn-md my-2 my-sm-0 ml-3">Signin</button></a>
+            </li>
+            <li class="nav-item"> <a href="/partnerRegisteration"> <button
+            class="btn btn-link btn-md my-2 my-sm-0 ml-3 ">Support</button></a>
+            </li>
+        </ul>
+        <!-- Links -->
+
+      </div>
+      <!-- Collapsible content -->
+
+    </div>
+
+  </nav>
+  <!--/.Navbar-->
+
+  <!-- Full Page Intro -->
+ 
+  <div id="intro" class="view">
+
+    <div class="mask" id="vm">
+
+      <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+
+        <div class="row d-flex justify-content-center text-center">
+
+
+          <div class="col-xl-5 " style="margin-top:15%;">
+
+            <!-- Heading -->
+            <h1 id="head" class="display-1 text-shadow animated pulse">We work towards boosting <br>your capabilities<br> and capacities.</h1><br>
+
+            <!-- Divider -->
+            <hr id="hero-divider"><br>
+
+            <!-- Description -->
+            <h4 id="subhead" class="my-4 text-shadow nimated pulse">Saksham helps you<br>seek people who are ready to contribute to your cause<br>
+              Lets give your problem a solution.</h4><a href="/consumerRegisteration">
+              <button type="button" id="cta" class="round btn purple-gradient white-text nimated pulse">
+               Become Saksham</button>
+            </a>
+
+          </div>
+
+          <div class="col-xl-7 " style="margin-top:10%;">
+            <img src="img/hero-2.svg" id="hero-svg">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!--/.Full Page Intro-->
+
+  <!-- Typeit JS -->
+  <script type="text/javascript">
+    new TypeIt('#subhead', {
+      strings: ["This is a great string.", "But here is a better one."],
+      speed: 80,
+      breakLines: false,
+      autoStart: false,
+      loop: true
+    });
+      
+      </script>
+</header>
+<!-- Main Layout -->
+<main>
+
+  <div style="padding: 5%;" id="svg-div">
+    <div class="container">
+      <!-- Section: SVG -->
+      <section class="text-center wow fadeIn" data-wow-delay="0.3s">
+
+        <div class="row">
+          <div class="col-md-5">
+            <img src="img/hero-3.svg" id="hero-svg-2">
+          </div>
+          <div class="col-md-6"
+            style="margin-top:5%;text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.25); text-align:right; font-size:1rem;">
+            <p class="dark-grey-text ">
+              When the millennium changed people's perspective of doing business changed. The technological advancements
+              are fueling
+              today's business growth. Locating potential customers became very easy. Instead of calling all customers
+              directly
+              companies have different approaches for the same.
+              Our job starts with you: understanding what you need, so we can present options that make sense for you.
+            </p>
+          </div>
+          <div class="col-md-1">
+            <hr id="vertical"><br>
+          </div>
+        </div>
+
+      </section>
+      <!-- Section: SVG -->
+    </div>
+  </div>
+
+
+  </div>
+
+  <!--Main layout-->
+</main>
+
+
+<!--SECTION SEPARATOR-->
+
+<!-- Footer -->
+<footer class="page-footer font-small white">
+ <%- include('../partial/footer'); -%>
+</footer>
+<!-- Footer -->
+
+<!--Custom JS-->                                                             
+                                                             
+<script type="text/javascript" src="js/script.js"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.js"></script>
+</body>
+</html>

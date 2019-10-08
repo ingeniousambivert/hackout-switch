@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('../partial/head'); -%>
+  <%- include('../partial/mic'); -%>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top white animated fadeInDownBig ">
+
+    <div class="container">
+
+      <!-- Navbar brand -->
+      <a class="navbar-brand" id="logo" href="#">SAKSHAM</a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-bar"
+        aria-controls="navigation-bar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+
+      <div class="collapse navbar-collapse " id="navigation-bar">
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto smooth-scroll">
+                    <li class="nav-item ">
+                    <a class="dropdown-item text-center" href="/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </li>
+        </ul>
+        <!-- Links -->
+
+      </div>
+      <!-- Collapsible content -->
+
+    </div>
+
+  </nav>
+  <!--/.Navbar-->
+
+</head>
+
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 1rem;
+      max-height: 100%;
+      overflow-y: scroll;
+      background:transparent;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
+<main>
+    <!--SECTION SEPARATOR-->
+
+    <div class="rgba-gradient" style="margin-top:5%;">
+        <div class="container mb-5">
+            <!--Section: Contact-->
+            <div class="swiper-container ">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide mb-5">
+                    <section id="contact">
+
+                        <div class="container h-100 d-flex justify-content-center align-items-center">
+        
+                            <!--Grid row-->
+                            <div class="row pt-5 mt-3">
+        
+                                <!--Grid column-->
+                                <div class="col-md-12">
+        
+                                    <div class="card" id="profile">
+                                        <div class="card-body">
+        
+                                            <h2 class="font-weight-bold my-4 text-center mb-5 mt-4 head font-weight-bold">
+                                                <strong>Profile</strong>
+                                            </h2>
+        
+                                            <!--Grid row-->
+                                            <div class="row mt-5">
+        
+                                                <!--Grid column-->
+                                                <div class="col-md-6 ml-lg-5 ml-md-3">
+        
+                                                    <!--Grid row-->
+                                                    <div class="row pb-4">
+                                                    <div class="col-xl-12">
+                                                            <img src="./img/profile.svg" class="w-75" >
+                                                        </div>
+                                                        <div class="col-12">
+        
+                                                            <p class="text-center mt-10">Being around in our team
+                                                                will allow you to have a creative work environment,
+                                                                collaboration
+                                                                and
+                                                                disruptive innovation.</p>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <br>
+                                                        </div>
+                                                        
+        
+                                                    </div>
+                                                    <!--Grid row-->
+        
+                                                </div>
+                                                <!--Grid column-->
+        
+                                                <!--Grid column-->
+                                                <div class="col-md-5">
+        
+                                                    <!--Naked Form-->
+                                                    <div class="card-block" id="contact-card">
+        
+        
+                                                        <!--Body-->
+                                                        <form action="/consumerDashboard/<%= consumerObject._id%>"
+                                                            method="POST">
+                                                            <input type="hidden" name="_method" value="put" />
+                                                            <div class="form-row mb-4">
+                                                                <div class="col">
+                                                                    <!-- First name -->
+                                                                    <input type="text" required name="Fname"
+                                                                        id="defaultRegisterFormFirstName" class="form-control edit"
+                                                                        value="<%= consumerObject.Fname%>">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <!-- Last name -->
+                                                                    <input type="text" required name="Lname"
+                                                                        id="defaultRegisterFormLastName" class="form-control edit"
+                                                                         value="<%= consumerObject.Lname%>">
+                                                                </div>
+                                                            </div>
+                                                            <!-- E-mail -->
+                                                            <input type="text" required name="address"
+                                                                id="defaultRegisterFormEmail" class="form-control mb-4 edit"
+                                                                value="<%= consumerObject.address%>" placeholder="Address">
+                                                                
+                                                             <!-- password -->
+                                                             <input type="text" required name="postalcode"
+                                                                id="defaultRegisterFormEmail" class="form-control mb-4"
+                                                                 value="<%= consumerObject.postalcode%>" placeholder="Postal Code">
+        
+                                                             
+                                                                <input type="text" required name="city"
+                                                                id="defaultRegisterFormEmail" class="form-control mb-4 edit"
+                                                                value="<%= consumerObject.city%>" placeholder="City">   
+                                                                
+                                                                <div class="form-group">
+                                                             
+                                                                    <input type="text" required name="phone"
+                                                                    id="defaultRegisterFormEmail" class="form-control mb-4 edit"
+                                                                    value="<%= consumerObject.phone%>" placeholder="Phone Number">   
+                                                                    <!-- Phone number -->
+                                                             
+                                                                <input type="text" required name="qualification"
+                                                                    id="defaultRegisterPhonePassword" class="form-control edit"
+                                                                    placeholder="Qualification"  value="<%= consumerObject.qualification%>"
+                                                                    aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                                                                </div>
+
+                                                                <div class="form-group">
+        
+                                                            <div class="md-form">
+                                                               
+                                                                <select name="gender" required
+                                                                    class="browser-default custom-select mb-4">
+                                                                    <option  placeholder= "Gender" class="grey-text edit" selected disabled><%= consumerObject.gender%></option>
+                                                                    <option value="Male">Male</option> 
+                                                                    <option value="Female">Female</option>
+                                                                    <option value="Others">Others</option>
+        
+                                                                </select>
+                                                                <textarea class="form-control edit" value="<%= consumerObject.bio%> placeholder="About" name="bio"></textarea>
+                                                            </div>
+                                                            
+        
+                                                            
+        
+                                                            <div class="text-center">
+                                                                <input type="submit" value="Update" class="btn btn-purple round ">
+                                                                                                                            </div>
+                                                        </form>
+        
+                                                    </div>
+                                                    <!--Naked Form-->
+                                                </div>
+                                                <!--Grid column-->
+        
+                                            </div>
+                                            <!--Grid row-->
+        
+                                        </div>
+                                    </div>
+        
+                                </div>
+                                <!--Grid column-->
+        
+                            </div>
+                            <!--Grid row-->
+        
+                        </div>
+                    </section>
+                  </div>
+
+                  <div class="swiper-slide">
+
+                    <section id="contact">
+
+                      <div class="container h-100 d-flex justify-content-center align-items-center">
+      
+                          <!--Grid row-->
+                          <div class="row pt-5 mt-3">
+      
+                              <!--Grid column-->
+                              <div class="col-md-12">
+      
+                                  <div class="card">
+                                      <div class="card-body">
+      
+                                          <h2 class="font-weight-bold my-4 text-center mb-5 mt-4 head font-weight-bold">
+                                              <strong>Find writers</strong>
+                                          </h2>
+      
+                                          <!--Grid row-->
+                                          <div class="row mt-5">
+      
+                                              <!--Grid column-->
+                                              <div class="col-md-6 ml-lg-5 ml-md-3">
+      
+                                                  <!--Grid row-->
+                                                  <div class="row pb-4">
+                                                      <div class="col-12">
+      
+                                                          <p class="text-center">Being around in our team
+                                                              will allow you to have a creative work environment,
+                                                              collaboration
+                                                              and
+                                                              disruptive innovation.</p>
+                                                      </div>
+                                                      <div class="col-12">
+                                                          <br>
+                                                      </div>
+                                                      <div class="col-xl-12">
+                                                          <img src="./img/book.svg" class="w-75" >
+                                                      </div>
+      
+                                                  </div>
+                                                  <!--Grid row-->
+      
+      
+      
+      
+                                              </div>
+                                              <!--Grid column-->
+      
+                                              <!--Grid column-->
+                                              <div class="col-md-5">
+      
+                                                  <!--Naked Form-->
+                                                  <div class="card-block" id="contact-card">
+      
+      
+                                                      <!--Body-->
+                                                      <form action="/request"
+                                                          method="POST">
+                                                          
+                                                          <!-- E-mail -->
+                                                          <input type="text" required name="need"
+                                                              id="defaultRegisterFormEmail" class="form-control mb-4"
+                                                              placeholder=" Need For">
+
+                                                          <!-- E-mail -->
+                                                          <input type="text" required name="examcenter"
+                                                              id="defaultRegisterFormEmail" class="form-control mb-4"
+                                                              placeholder=" Exam Center">
+
+                                                              <!-- E-mail -->
+                                                          <input type="text" required name="field"
+                                                              id="defaultRegisterFormEmail" class="form-control mb-4"
+                                                              placeholder=" Field">
+
+                                                              <!-- E-mail -->
+                                                          <input type="text" required name="subject"
+                                                              id="defaultRegisterFormEmail" class="form-control mb-4"
+                                                              placeholder=" Subject">
+
+                                                           <!-- password -->
+                                                           <input type="number" required name="postalcode"
+                                                              id="defaultRegisterFormEmail" class="form-control mb-4"
+                                                              placeholder=" Postal Code">
+      
+                                                           
+                                                              <input type="text" required name="language"
+                                                              id="defaultRegisterFormEmail" class="form-control mb-4"
+                                                              placeholder=" Paper Medium">   
+                                                              
+                                                              <div class="form-group">
+                                                           
+                                                                  <input type="date" required name="date"
+                                                                  id="defaultRegisterFormEmail" class="form-control mb-4"
+                                                                  placeholder=" Exam Date">   
+                                                                  <!-- Phone number -->
+                                                           
+                                                              <input type="time" required name="time"
+                                                                  id="defaultRegisterPhonePassword" class="form-control"
+                                                                  placeholder=" Time of exam"
+                                                                  aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                                                              </div>
+
+                                                              <div class="form-group">
+
+                                                          <div class="text-center">
+                                                              <input type="submit" value="Post" class="btn btn-purple round ">
+                                                                                                                          </div>
+                                                      </form>
+      
+                                                  </div>
+                                                  <!--Naked Form-->
+                                              </div>
+                                              <!--Grid column-->
+      
+                                          </div>
+                                          <!--Grid row-->
+      
+                                      </div>
+                                  </div>
+      
+                              </div>
+                              <!--Grid column-->
+      
+                          </div>
+                          <!--Grid row-->
+      
+                      </div>
+                  </section>
+
+                  </div>
+                  
+                  <div class="swiper-slide">
+                   
+                  
+        <div class="container">
+             <div class="card mt-10">
+                                <div class="card-body">
+
+                                    <h2 class="font-weight-bold my-4 text-center mb-5 mt-4 head font-weight-bold">
+                                        <strong>Upload Files To Read Out</strong>
+                                    </h2>
+
+                                    <!--Grid row-->
+                                    <div class="row mt-5">
+
+                                        <!--Grid column-->
+                                        <div class="col-md-6 ml-lg-5 ml-md-3">
+
+                                            <!--Grid row-->
+                                            <div class="row pb-4">
+                                              
+                                                <div class="col-xl-12">
+                                                    <img src="./img/addfile.svg">
+                                                </div>
+
+                                            </div>
+                                            <!--Grid row-->
+
+                                        </div>
+                                        <!--Grid column-->
+
+                                        <!--Grid column-->
+                                        <div class="col-md-5">
+
+                                            <!--Naked Form-->
+                                            <div class="card-block" id="contact-card">
+
+
+                                                <!--Body-->
+                                                <form class="mt-5" id='uploadForm'  enctype="multipart/form-data"
+                                                    method="POST" action="/upload">
+                                    <div class="input-group mb-4">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Upload</span>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" capture name=
+                                            "sampleFile" class="custom-file-input" id="fileInput" aria-describedby="fileInput">
+                                            <label class="custom-file-label" for="fileInput">File Label</label>
+                                        </div>
+                                    </div>
+                                                    <div class="text-center">
+                                                        <input type="submit" value="Upload" class="btn btn-purple round ">
+                                                    </div>
+                                                </form>
+                                </div>
+                           </div>
+
+    <!--Main layout-->
+</main>
+
+
+<!--SECTION SEPARATOR-->
+
+<!-- Footer -->
+<footer class="page-footer font-small white">
+ <%- include('../partial/footer'); -%>
+</footer>
+<!-- Footer -->
+
+// <script >
+// let edits=document.querySelectorAll(".edit");
+
+// for(let edit in edits){
+//    console.log(edit[[[]]]);
+//     edit.disabled=true;
+// }
+
+// </script>
+<!--Custom JS-->
+<script type="text/javascript" src="js/script.js"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"> </script>
+<script>
+  
+  
+
+  var swiper = new Swiper('.swiper-container');
+    swiper.on('slideChange',function(){
+        if(swiper.activeIndex==1){
+//profile
+var msg = new SpeechSynthesisUtterance('Profile');
+window.speechSynthesis.speak(msg)
+
+        }else if(swiper.activeIndex==1){
+//book writer
+var msg = new SpeechSynthesisUtterance('Post For Help');
+window.speechSynthesis.speak(msg)
+
+
+        }else if(swiper.activeIndex==2){
+
+            var msg = new SpeechSynthesisUtterance('Text to speech');
+window.speechSynthesis.speak(msg)
+        } 
+
+    });
+
+
+    $(document).ready(function() { 
+        var msg = new SpeechSynthesisUtterance('Profile');
+        window.speechSynthesis.speak(msg)
+
+    });
+
+
+
+  </script>
+</html>

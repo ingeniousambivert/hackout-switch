@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <%- include('../partial/head'); -%>
+   <%- include('../partial/mic'); -%>
+   <!-- CSS Files -->
+  <link href="./assets/css/argon-dashboard.css" rel="stylesheet" />
+</head>
+
+<body style="background-color:#fff;">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand" id="logo" href="/dashboard">SAKSHAM HELPER</a>
+      
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+             
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Navigation -->
+        <ul class="navbar-nav">
+         
+          <li class="nav-item">
+            <a class="nav-link " href="/partnerDashboard">
+              Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/partnerActivities">
+              Activities
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/consumerNeeds">
+               In Need
+            </a>
+          </li>
+         
+        </ul>
+        <!-- Divider -->
+        <hr class="my-3">
+        
+        <!-- Navigation -->
+        <ul class="navbar-nav mb-md-3">
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">
+              Logout
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="main-content mb-4">
+ 
+ <!-- Header -->
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center rgba-gradient" style="min-height: 300px;">
+      <!-- Mask -->
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <!-- Header container -->
+      <div class="container-fluid d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="display-2 text-white">Request List</h1>
+            <p class="text-white mt-0 mb-5">This is your activities page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+    <!-- Card -->
+  <div class="card justify-content-center center-content w-75 mt-5">
+  <!-- Card content -->
+  <div class="card-body">
+    <!-- Title -->
+    <h4 class="card-title"><a>You are helping Will</a></h4>
+    <!-- Text -->
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-teal">Accept</a>
+    <a href="#" class="btn btn-danger">Reject</a>
+
+  </div>
+
+</div>
+<!-- Card -->
+
+ <!-- Card -->
+  <div class="card justify-content-center center-content w-75 mt-5">
+  <!-- Card content -->
+  <div class="card-body">
+    <!-- Title -->
+    <h4 class="card-title"><a>You are helping Josh</a></h4>
+    <!-- Text -->
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <!-- Button -->
+    <a href="#" class="btn btn-teal">Accept</a>
+    <a href="#" class="btn btn-danger">Reject</a>
+
+  </div>
+
+</div>
+<!-- Card -->
+
+
+    </div>
+   
+  </div>
+  <!--   Core   -->
+  <script src="./js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="./js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!--   Optional JS   -->
+  <script src="./js/plugins/chart.js/dist/Chart.min.js"></script>
+  <script src="./js/plugins/chart.js/dist/Chart.extension.js"></script>
+  <!--   Argon JS   -->
+  <script src="./js/argon-dashboard.min.js?v=1.1.0"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-dashboard-free"
+      });
+  </script>
+</body>
+
+</html>
+<!--
+
+=========================================================
+* Argon Dashboard - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->

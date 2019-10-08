@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partial/head'); -%>
+  <%- include('../partial/mic'); -%>
+</head>
+
+  <%- include('../partial/navbar'); -%>
+<main>
+    <!--SECTION SEPARATOR-->
+
+<% if(passError){ %>
+  <script>
+swal("Error", "Passwords dont match", "error");
+</script>
+<%}%>
+
+<% if(emailError){ %>
+  <script>
+swal("Error", "This email already exists", "error");
+</script>
+<%}%>
+
+    <div class="rgba-gradient" style="margin-top:5%;">
+        <div class="container">
+            <!--Section: Contact-->
+            <section id="contact">
+
+                <div class="container h-100 d-flex justify-content-center align-items-center">
+
+                    <!--Grid row-->
+                    <div class="row pt-5 mt-3">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <h2 class="font-weight-bold my-4 text-center mb-5 mt-4 head font-weight-bold">
+                                        <strong>Signup To Saksham</strong>
+                                    </h2>
+
+                                    <!--Grid row-->
+                                    <div class="row mt-5">
+
+                                        <!--Grid column-->
+                                        <div class="col-md-6 ml-lg-5 ml-md-3">
+
+                                            <!--Grid row-->
+                                            <div class="row pb-4">
+                                                <div class="col-12">
+
+                                                    <p class="text-center">Being around in our team
+                                                        will allow you to have a creative work environment,
+                                                        collaboration
+                                                        and
+                                                        disruptive innovation.</p>
+                                                </div>
+                                                <div class="col-12">
+                                                    <br>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <img src="./img/blindman.svg">
+                                                </div>
+
+                                            </div>
+                                            <!--Grid row-->
+
+                                        </div>
+                                        <!--Grid column-->
+
+                                        <!--Grid column-->
+                                        <div class="col-md-5">
+
+                                            <!--Naked Form-->
+                                            <div class="card-block" id="contact-card">
+
+
+                                                <!--Body-->
+                                                <form action="/consumer"
+                                                    method="POST">
+                                                    <div class="form-row mb-4">
+                                                        <div class="col">
+                                                            <!-- First name -->
+                                                            <input type="text" required name="Fname"
+                                                                id="defaultRegisterFormFirstName" class="form-control"
+                                                                placeholder="First name">
+                                                        </div>
+                                                        <div class="col">
+                                                            <!-- Last name -->
+                                                            <input type="text" required name="Lname"
+                                                                id="defaultRegisterFormLastName" class="form-control"
+                                                                placeholder="Last name">
+                                                        </div>
+                                                    </div>
+                                                    <!-- E-mail -->
+                                                    <input type="email" required name="email"
+                                                        id="defaultRegisterFormEmail" class="form-control mb-4"
+                                                        placeholder="E-mail">
+
+                                                        <!-- password -->
+                                                     <input type="password" required name="password"
+                                                        id="defaultRegisterFormEmail" class="form-control mb-4"
+                                                        placeholder="Password">
+
+                                                      <input type="password" required name="confirmpassword"
+                                                        id="defaultRegisterFormEmail" class="form-control mb-4"
+                                                        placeholder="Confirm Password">  
+
+                                                    <div class="form-group">
+                                                        <!-- Phone number -->
+                                                        <input type="number" required name="phone"
+                                                            id="defaultRegisterPhonePassword" class="form-control"
+                                                            placeholder="Phone number"
+                                                            aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                                                    </div>
+                                                    
+                                                    <div class="md-form">
+
+                                                        <select name="gender" required
+                                                            class="browser-default custom-select mb-4">
+                                                            <option value="" class="grey-text" selected disabled>Choose
+                                                                your gender</option>
+                                                            <option value="Male">Male</option>
+                                                            <option value="Female">Female</option>
+                                                            <option value="Others">Others</option>
+
+                                                        </select>
+                                                    </div>
+
+
+                                                    <div class="text-center">
+                                                        <input type="submit" value="Signup" class="btn btn-purple round ">
+                                                        <div class="mt-4">
+                                                           <a href="/consumerLogin"> <span style="color:black;"> Already have an account?</span> Login</a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                            <!--Naked Form-->
+                                        </div>
+                                        <!--Grid column-->
+
+                                    </div>
+                                    <!--Grid row-->
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </div>
+            </section>
+            <!--Section Contact-->
+        </div>
+
+        <!-- FOOTER SVG -->
+        <div class="svrow">
+            <svg id="footer-svg" preserveAspectRatio="xMidYMax meet" class="svg-separator sep4" viewBox="0 0 1600 200"
+                style="display: block;" data-height="200">
+                <polygon class="" style="fill: rgb(255, 255, 255);"
+                    points="886,86 800,172 714,86 -4,86 -4,204 1604,204 1604,86 ">
+                </polygon>
+            </svg>
+        </div>
+
+    </div>
+
+    <!--Main layout-->
+</main>
+
+
+<!--SECTION SEPARATOR-->
+
+<!-- Footer -->
+<footer class="page-footer font-small white">
+ <%- include('../partial/footer'); -%>
+</footer>
+<!-- Footer -->
+
+
+<!--Custom JS-->
+<script type="text/javascript" src="js/script.js"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.js">
+</script>
+
+</html>
